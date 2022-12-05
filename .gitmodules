@@ -1,6 +1,0 @@
-[submodule "daily_meeting"]
-	path = daily_meeting
-	url = git@github.com:pablo0722/daily_meeting.git
-[submodule "scrum_poker"]
-	path = scrum_poker
-	url = git@github.com:pablo0722/scrum_poker.git
