@@ -1,3 +1,6 @@
 [submodule "daily_meeting"]
 	path = daily_meeting
 	url = https://github.com/pablo0722/daily_meeting
+[submodule "scrum_poker"]
+	path = scrum_poker
+	url = https://github.com/pablo0722/scrum_poker
