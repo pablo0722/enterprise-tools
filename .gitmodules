@@ -1,0 +1,3 @@
+[submodule "daily_meeting"]
+	path = daily_meeting
+	url = https://github.com/pablo0722/daily_meeting
