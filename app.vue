@@ -1,5 +1,13 @@
+<script>
+export default {
+  data() {
+    return {
+      message: 'Hello World!'
+    }
+  }
+}
+</script>
+
 <template>
-  <div>
-    <NuxtWelcome />
-  </div>
+  <h1>{{ message }}</h1>
 </template>
