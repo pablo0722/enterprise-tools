@@ -1,0 +1,253 @@
+
+/*****************************************************************************
+ * GENERAL STYLES 
+ *****************************************************************************/
+$device-xs: 540px;
+$device-sm: 768px;
+$device-md: 992px;
+$device-lg: 1200px;
+
+
+
+
+
+/*****************************************************************************
+ * JUMBOTRON ALL 
+ *****************************************************************************/
+.jumbotron-all {
+  @media (min-width: $device-xs) {
+    max-width: $device-xs;
+  }
+
+  @media (min-width: $device-sm) {
+    max-width: $device-sm;
+  }
+
+  @media (min-width: $device-md) {
+    max-width: $device-md;
+  }
+
+  @media (min-width: $device-lg) {
+    max-width: $device-lg;
+  }
+
+  position:relative; /* needed for footer positioning*/
+  margin:0 auto; /* center, not in IE5 */
+  height: 1000px;
+}
+
+
+
+
+
+/*****************************************************************************
+ * JUMBOTRON HEADER 
+ *****************************************************************************/
+
+.jumbotron-header {
+  background: #3A2064 ;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 5%;
+}
+
+.jumbotron-header a {
+  text-decoration: none;
+  display: inline-block;
+  margin: auto 3em;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.jumbotron-header a > p {
+  margin: 0;
+  font-size: larger;
+  font-weight: 900;
+  color: red;
+}
+
+
+
+
+
+/*****************************************************************************
+ * JUMBOTRON CONTENT 
+ *****************************************************************************/
+.jumbotron {
+  background: #532F8C;
+  color: white;
+  padding-bottom: 80px;
+  margin: 0;
+  padding: 0;
+  height: 95%;
+}
+
+.jumbotron .btn-primary {
+  background: #845ac7;
+  border-color: #845ac7;
+}
+
+.jumbotron .btn-primary:hover {
+  background: #7646c1;
+}
+
+.jumbotron .owner-btn {
+  background: #845ac7;
+  border-color: #845ac7;
+}
+
+.jumbotron .owner-btn:hover {
+  background: #a47ae7;
+}
+
+.jumbotron #owner {
+  background: #55b755;
+  border-color: #55b755;
+}
+
+.jumbotron #owner:hover {
+  background: #55e755;
+}
+
+.jumbotron p {
+  color: #d9ccee;
+  max-width: 75%;
+  margin: 1em auto 2em;
+}
+
+.navbar + .jumbotron {
+  margin-top: -20px;
+}
+
+.jumbotron .lang-logo {
+  display: block;
+  background: #B01302;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 2px solid white;
+}
+
+.jumbotron .lang-logo img {
+  max-width: 100%;
+}
+
+.jumbotron table {
+  color:white;
+  margin: 4em auto 0 auto;
+}
+
+table > caption {
+  caption-side: top;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.jumbotron td, th {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid black;
+}
+
+.jumbotron th {
+  font-size: 24px;
+}
+
+.jumbotron td {
+  font-size: 22px;
+}
+
+.jumbotron input {
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+}
+
+.jumbotron a {
+  text-decoration: none;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+}
+
+.jumbotron a > p {
+  margin: 0;
+  font-size: larger;
+  font-weight: 900;
+  color: red;
+  height: 100%;
+}
+
+.jumbotron .button {
+  background-color: #3A2064;
+  border-color: #39F;
+}
+
+.jumbotron .button:hover {
+  background: #04A;
+  color: #DDDDDD;
+  text-shadow: 0 1px #007FFF
+}
+
+.button:active {
+  background: #007FFF;
+  color: #FFF;
+  border-top: 2px solid #06C
+}
+
+.jumbotron .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+
+
+
+
+
+/*****************************************************************************
+ * JUMBOTRON FOOTER 
+ *****************************************************************************/
+
+.jumbotron-footer {
+  background: #3A2064 ;
+  color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  flex-direction: column;
+}
+
+.jumbotron-footer a {
+  text-decoration: none;
+  margin: 1em auto;
+}
+
+.jumbotron-footer a > p {
+  margin: auto;
+  font-size: larger;
+  font-weight: 900;
+  color: red;
+}
+
+
+
+
+
+
+/*****************************************************************************
+ * DEBUG
+ *****************************************************************************/
+
+.box {
+  background: none;
+  border-style: none;
+}

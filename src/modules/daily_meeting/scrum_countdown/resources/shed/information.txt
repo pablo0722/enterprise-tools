@@ -1,0 +1,4 @@
+GOAL: "REPLACE WITH THE GOAL OF THE SPRINT"
+What have you done yesterday?
+What will you do today?
+Any impediments in yor way?

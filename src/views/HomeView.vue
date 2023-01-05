@@ -1,27 +1,4 @@
-<script>
-export default {
-  data: () => ({
-    components: [
-      { id: 0, text: "ScrumPoker", link: "Other" },
-      { id: 1, text: "DailyMeeting", link: "Other" },
-    ],
-  }),
-};
-</script>
-
 <template>
-  <button
-    v-for="item of components"
-    :key="item.id"
-    @click="$router.push({ name: item.link })"
-  >
-    {{ item.text }}
-  </button>
+  <h1>Home</h1>
+  <p>Please select a tool</p>
 </template>
-
-<style>
-button {
-  display: block;
-  margin-bottom: 1em;
-}
-</style>
