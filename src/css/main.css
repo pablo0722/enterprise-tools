@@ -1,0 +1,360 @@
+
+/*****************************************************************************
+ * GENERAL STYLES 
+ *****************************************************************************/
+$device-xs: 540px;
+$device-sm: 768px;
+$device-md: 992px;
+$device-lg: 1200px;
+
+
+
+
+
+/*****************************************************************************
+ * JUMBOTRON ALL 
+ *****************************************************************************/
+.jumbotron-all {
+  @media (min-width: $device-xs) {
+    max-width: $device-xs;
+  }
+
+  @media (min-width: $device-sm) {
+    max-width: $device-sm;
+  }
+
+  @media (min-width: $device-md) {
+    max-width: $device-md;
+  }
+
+  @media (min-width: $device-lg) {
+    max-width: $device-lg;
+  }
+
+  position:relative; /* needed for footer positioning*/
+  margin:0 auto; /* center, not in IE5 */
+  height: 1000px;
+}
+
+
+
+
+
+/*****************************************************************************
+ * JUMBOTRON HEADER 
+ *****************************************************************************/
+
+.jumbotron-header-spacer {
+  background: #3A2064 ;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 5vh;
+  width: 100%;
+}
+
+.jumbotron-header {
+  background: #3A2064 ;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 5vh;
+  width: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+}
+
+.jumbotron-header a {
+  text-decoration: none;
+  display: inline-block;
+  margin: auto 3em;
+  position: relative;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.jumbotron-header a > p {
+  margin: 0;
+  font-size: larger;
+  font-weight: 900;
+  color: red;
+}
+
+
+
+
+
+/*****************************************************************************
+ * JUMBOTRON CONTENT 
+ *****************************************************************************/
+.jumbotron-center {
+  background: #532F8C;
+  color: white;
+  padding-bottom: 80px;
+  margin: 0;
+  padding: 0;
+  height: 80vh;
+}
+
+.jumbotron-center .btn-primary {
+  background: #845ac7;
+  border-color: #845ac7;
+}
+
+.jumbotron-center .btn-primary:hover {
+  background: #7646c1;
+}
+
+.jumbotron-center .owner-btn {
+  background: #845ac7;
+  border-color: #845ac7;
+}
+
+.jumbotron-center .owner-btn:hover {
+  background: #a47ae7;
+}
+
+.jumbotron-center #owner {
+  background: #55b755;
+  border-color: #55b755;
+}
+
+.jumbotron-center #owner:hover {
+  background: #55e755;
+}
+
+.jumbotron-center p {
+  color: #d9ccee;
+  max-width: 75%;
+  margin: 0 auto 0;
+}
+
+.navbar + .jumbotron-center {
+  margin-top: -20px;
+}
+
+.jumbotron-center .lang-logo {
+  display: block;
+  background: #B01302;
+  border-radius: 50%;
+  overflow: hidden;
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border: 2px solid white;
+}
+
+.jumbotron-center .lang-logo img {
+  max-width: 100%;
+}
+
+.jumbotron-center table {
+  color:white;
+  margin: 4em auto 0 auto;
+}
+
+table > caption {
+  caption-side: top;
+  text-align: center;
+  color: white;
+  font-size: 1.2em;
+  font-weight: bolder;
+}
+
+.jumbotron-center td, th {
+  text-align: center;
+  padding-left: 20px;
+  padding-right: 20px;
+  border: 1px solid black;
+}
+
+.jumbotron-center th {
+  font-size: 24px;
+}
+
+.jumbotron-center td {
+  font-size: 22px;
+}
+
+.jumbotron-center input {
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+}
+
+.jumbotron-center .btn-primary:disabled {
+    background-color: dimgrey;
+    border-color: dimgrey;
+    color: linen;
+    opacity: 1;
+}
+
+.jumbotron-center a {
+  text-decoration: none;
+  margin-left: 0.1em;
+  margin-right: 0.1em;
+}
+
+.jumbotron-center a > p {
+  margin: 0;
+  font-size: larger;
+  font-weight: 900;
+  color: red;
+  height: 100%;
+}
+
+.jumbotron-center .button {
+  background-color: #3A2064;
+  border-color: #39F;
+}
+
+.jumbotron-center .button:hover {
+  background: #04A;
+  color: #DDDDDD;
+  text-shadow: 0 1px #007FFF
+}
+
+.button:active {
+  background: #007FFF;
+  color: #FFF;
+  border-top: 2px solid #06C
+}
+
+.jumbotron-center .disabled {
+    opacity: 0.5;
+    pointer-events: none;
+}
+
+.jumbotron-center .panel-left {
+  background: #3A2064 ;
+  border: 1px solid #007FFF;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  width: 20%;
+  position: fixed;
+  top: 50%;
+  left: 0px;
+  -ms-transform: translateY(-55%);
+  transform: translateY(-55%);
+  overflow-y: scroll;
+}
+
+.jumbotron-center .panel-right {
+  background: #3A2064 ;
+  border: 1px solid #007FFF;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  width: 20%;
+  position: fixed;
+  top: 50%;
+  right: 0px;
+  -ms-transform: translateY(-55%);
+  transform: translateY(-55%);
+  overflow-y: scroll;
+}
+
+.jumbotron-center .panel-center {
+  background: #532F8C ;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 70vh;
+  width: 60%;
+  position: fixed;
+  top: 12%;
+  right: 50%;
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
+  overflow-y: scroll;
+}
+
+.jumbotron-center .button-icon-blue {
+  display: inline;
+  margin-left: 10px;
+  border-radius: 100%;
+  background-color: #a47ae7;
+  color: white;
+  font-weight: 900;
+  font-size: large;
+}
+
+.jumbotron-center .button-icon-blue:hover {
+  background-color: blue;
+}
+
+.jumbotron-center .button-icon-red {
+  display: inline;
+  margin-left: 10px;
+  border-radius: 100%;
+  background-color: #a47ae7;
+  color: white;
+  font-weight: 900;
+  font-size: large;
+}
+
+.jumbotron-center .button-icon-red:hover {
+  background-color: red;
+}
+
+.jumbotron-center .selected {
+  color: red;
+}
+
+
+
+
+
+/*****************************************************************************
+ * JUMBOTRON FOOTER 
+ *****************************************************************************/
+
+.jumbotron-footer-spacer {
+  background: #3A2064 ;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 15vh;
+  width: 100%;
+}
+
+.jumbotron-footer {
+  background: #3A2064 ;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 15vh;
+  width: 100%;
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+}
+
+.jumbotron-footer a {
+  text-decoration: none;
+}
+
+.jumbotron-footer a > p {
+  margin: 0.8em 0;
+  font-size: larger;
+  font-weight: 900;
+  color: red;
+}
+
+
+
+
+
+
+/*****************************************************************************
+ * DEBUG
+ *****************************************************************************/
+
+.box {
+  background: none;
+  border-style: none;
+}
