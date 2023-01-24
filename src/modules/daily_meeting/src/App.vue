@@ -103,6 +103,8 @@ export default defineComponent({
         <br />
         <h3>Orden de la Daily: {{ $route.query.celda }}</h3>
         <div id="order"></div>
+      </div>
+      <div class="panel-center2">
         <br />
         <button class="button-primary" id="reorder-btn">Reorder</button>
         <button class="button-primary" id="prev-btn">Prev</button>

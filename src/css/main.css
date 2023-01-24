@@ -263,7 +263,7 @@ table > caption {
   color: white;
   margin: 0;
   padding: 0;
-  height: 70vh;
+  height: 38vh;
   width: 60%;
   position: fixed;
   top: 12%;
@@ -271,6 +271,20 @@ table > caption {
   -ms-transform: translateX(50%);
   transform: translateX(50%);
   overflow-y: scroll;
+}
+
+.jumbotron-center .panel-center2 {
+  background: #532F8C ;
+  color: white;
+  margin: 0;
+  padding: 0;
+  height: 25vh;
+  width: 60%;
+  position: fixed;
+  top: 50%;
+  right: 50%;
+  -ms-transform: translateX(50%);
+  transform: translateX(50%);
 }
 
 .jumbotron-center .button-icon-blue {
