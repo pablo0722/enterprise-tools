@@ -48,24 +48,57 @@ function shuffle(array: any[]) {
   return array;
 }
 
-function reorder_(celda: string, data: { [key: string]: string[] }) {
+async function reorder_(celda: string, data: { [key: string]: string[] }) {
   const order = shuffle(data.participants);
   $("#order").empty();
   let pos = 0;
   _countdownMax = data.participants.length - 1;
-  order.forEach((e) => {
+  for (let i = 0; i < order.length; i++) {
+    const e = order[i];
+    const data2_str: string = await getData(
+      `${STORAGE_GET_LINK}issues_pendientes.json`
+    );
+
     const p = document.createElement("p");
     p.innerHTML = `${e}`;
-    p.style.display = "inline";
+    p.style.display = "block";
     p.style.fontWeight = "900";
     p.style.fontSize = "xx-large";
     p.setAttribute("id", `pos_${pos}`);
-    pos += 1;
     $("#order").append(p);
 
-    const br = document.createElement("br");
-    $("#order").append(br);
-  });
+    const div = document.createElement("div");
+    div.style.display = "block";
+    div.style.fontWeight = "900";
+    div.style.fontSize = "xx-large";
+    div.setAttribute("id", `div_pos_${pos}`);
+
+    if (data2_str != "") {
+      const data2: { [key: string]: string[] } = JSON.parse(data2_str);
+
+      const p2 = document.createElement("p");
+      p2.innerHTML = `Pendientes:`;
+      p2.style.display = "block";
+      p2.style.fontWeight = "900";
+      p2.style.fontSize = "x-large";
+      div.append(p2);
+
+      if (data2[`${e}`]) {
+        data2[`${e}`].forEach((d) => {
+          const p3 = document.createElement("p");
+          p3.innerHTML = `${d}`;
+          p3.style.display = "block";
+          p3.style.fontWeight = "900";
+          p3.style.fontSize = "large";
+          div.append(p3);
+        });
+      }
+    }
+    $("#order").append(div);
+    $(`#div_pos_${pos}`).hide();
+
+    pos += 1;
+  }
 }
 
 function reorder(celda: string) {
@@ -183,11 +216,15 @@ function enableOuterInteraction() {
 
 function unselect() {
   $(`.selected`).removeClass("selected");
+  $(`.selected2`).hide();
+  $(`.selected2`).removeClass("selected2");
 }
 
 function select() {
   unselect();
   $(`#pos_${_pos}`).addClass("selected");
+  $(`#div_pos_${_pos}`).show();
+  $(`#div_pos_${_pos}`).addClass("selected2");
 }
 
 function countdownCallback() {
