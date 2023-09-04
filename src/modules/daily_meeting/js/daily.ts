@@ -255,6 +255,8 @@ function countdownCallback() {
 }
 
 function onStartup(celda: string) {
+  reset(false);
+
   $("#participants-btn").unbind("click");
   $("#participants-btn").click(function () {
     add(celda, "participants");
@@ -329,9 +331,7 @@ function onStartup(celda: string) {
 
   $("#end-btn").unbind("click");
   $("#end-btn").click(function () {
-    unselect();
-    enableOuterInteraction();
-    clearInterval(_countdownTimer);
+    reset(true);
   });
 
   const cd = $("#countdown");
@@ -352,6 +352,15 @@ function needClear(): boolean {
   const ret = _needClear;
   _needClear = false;
   return ret;
+}
+
+function reset(keepCountdown: boolean): void {
+  if(!keepCountdown) {
+    $("#countdown").html("");
+  }
+  unselect();
+  enableOuterInteraction();
+  clearInterval(_countdownTimer);
 }
 
 export default {
