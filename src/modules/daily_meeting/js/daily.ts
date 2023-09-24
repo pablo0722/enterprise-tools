@@ -53,8 +53,7 @@ async function reorder_(celda: string, data: { [key: string]: string[] }) {
   $("#order").empty();
   let pos = 0;
   _countdownMax = data.participants.length - 1;
-  for (let i = 0; i < order.length; i++) {
-    const e = order[i];
+  for (const e of order) {
     const data2_str: string = await getData(
       `${STORAGE_GET_LINK}issues_pendientes.json`
     );
@@ -76,12 +75,32 @@ async function reorder_(celda: string, data: { [key: string]: string[] }) {
     if (data2_str != "") {
       const data2: { [key: string]: string[] } = JSON.parse(data2_str);
 
-      const p2 = document.createElement("p");
-      p2.innerHTML = `Pendientes:`;
-      p2.style.display = "block";
-      p2.style.fontWeight = "900";
-      p2.style.fontSize = "x-large";
-      div.append(p2);
+      const row2 = document.createElement("div");
+      row2.className = "row";
+      div.append(row2);
+
+      type columns2_t = {
+        name: string,
+        element: HTMLParagraphElement | null
+      };
+      let columns2: {pendientes: columns2_t, en_progreso: columns2_t, completados: columns2_t} = {
+          pendientes: {name:"Pendientes",  element: null},
+          en_progreso: {name:"En progreso", element: null},
+          completados: {name:"Completados", element: null}
+      };
+      for(const c of Object.values(columns2))
+      {
+        c.element = document.createElement("div");
+        c.element.className = "col-md-4";
+        row2.append(c.element);
+
+        const p2 = document.createElement("p");
+        p2.innerHTML = c.name;
+        p2.style.display = "block";
+        p2.style.fontWeight = "900";
+        p2.style.fontSize = "x-large";
+        c.element.append(p2);
+      }
 
       if (data2[`${e}`]) {
         data2[`${e}`].forEach((d) => {
@@ -90,7 +109,18 @@ async function reorder_(celda: string, data: { [key: string]: string[] }) {
           p3.style.display = "block";
           p3.style.fontWeight = "900";
           p3.style.fontSize = "large";
-          div.append(p3);
+          if(d.includes("[Closed]") || d.includes("[Resolved]"))
+          {
+            columns2.completados.element?.append(p3);
+          }
+          else if(d.includes("[In Progress]"))
+          {
+            columns2.en_progreso.element?.append(p3);
+          }
+          else // if(d.includes("[Open]") || d.includes("[Reopened]"))
+          {
+            columns2.pendientes.element?.append(p3);
+          }
         });
       }
     }
