@@ -215,6 +215,7 @@ function add(celda: string, id: string) {
 function disableOuterInteraction() {
   $("#reorder-btn").hide();
   $("#start-btn").hide();
+  $("#timer-settings").hide();
   $("#prev-btn").show();
   $("#next-btn").show();
   $("#end-btn").show();
@@ -231,6 +232,7 @@ function disableOuterInteraction() {
 function enableOuterInteraction() {
   $("#reorder-btn").show();
   $("#start-btn").show();
+  $("#timer-settings").show();
   $("#prev-btn").hide();
   $("#next-btn").hide();
   $("#end-btn").hide();

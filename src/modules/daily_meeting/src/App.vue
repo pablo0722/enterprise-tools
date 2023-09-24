@@ -112,7 +112,7 @@ export default defineComponent({
         <button class="button-primary" id="end-btn">End</button>
         <br />
         <br />
-        <div style="align-items: flex-start">
+        <div style="align-items: flex-start" id="timer-settings">
           <label for="Horas">Horas: </label>
           <input
             type="number"
