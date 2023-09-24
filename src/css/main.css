@@ -263,7 +263,7 @@ table > caption {
   color: white;
   margin: 0;
   padding: 0;
-  height: 38vh;
+  height: 58vh;
   width: 60%;
   position: fixed;
   top: 12%;
@@ -281,7 +281,7 @@ table > caption {
   height: 25vh;
   width: 60%;
   position: fixed;
-  top: 50%;
+  top: 70%;
   right: 50%;
   -ms-transform: translateX(50%);
   transform: translateX(50%);

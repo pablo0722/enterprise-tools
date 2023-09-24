@@ -105,46 +105,50 @@ export default defineComponent({
         <div id="order"></div>
       </div>
       <div class="panel-center2">
-        <br />
-        <button class="button-primary" id="reorder-btn">Reorder</button>
+        <div class="row">
+          <div class="col-md-6">
+            <div style="align-items: flex-start" id="timer-settings">
+              <label for="Horas">Horas: </label>
+              <input
+                type="number"
+                id="countdown_h-txt"
+                placeholder="[horas]"
+                class="input"
+                style="width: 10%; margin-left: 1em"
+                value="0"
+              />
+              <br />
+              <label for="Minutos" style="text-align: left">Minutos: </label>
+              <input
+                type="number"
+                id="countdown_m-txt"
+                placeholder="[minutos]"
+                class="input"
+                style="width: 10%; margin-left: 1em"
+                value="30"
+              />
+              <br />
+              <label for="Segundos" style="text-align: left">Segundos: </label>
+              <input
+                type="number"
+                id="countdown_s-txt"
+                placeholder="[segundos]"
+                class="input"
+                style="width: 10%; margin-left: 1em"
+                value="0"
+              />
+            </div>
+          </div>
+          <div class="col-md-6">
+            <button class="button-primary" id="reorder-btn">Reorder</button>
+            <br />
+            <br />
+            <button class="button-primary" id="start-btn">Start</button>
+          </div>
+        </div>
         <button class="button-primary" id="prev-btn">Prev</button>
         <button class="button-primary" id="next-btn">Next</button>
         <button class="button-primary" id="end-btn">End</button>
-        <br />
-        <br />
-        <div style="align-items: flex-start" id="timer-settings">
-          <label for="Horas">Horas: </label>
-          <input
-            type="number"
-            id="countdown_h-txt"
-            placeholder="[horas]"
-            class="input"
-            style="width: 10%; margin-left: 1em"
-            value="0"
-          />
-          <br />
-          <label for="Minutos" style="text-align: left">Minutos: </label>
-          <input
-            type="number"
-            id="countdown_m-txt"
-            placeholder="[minutos]"
-            class="input"
-            style="width: 10%; margin-left: 1em"
-            value="30"
-          />
-          <br />
-          <label for="Segundos" style="text-align: left">Segundos: </label>
-          <input
-            type="number"
-            id="countdown_s-txt"
-            placeholder="[segundos]"
-            class="input"
-            style="width: 10%; margin-left: 1em"
-            value="0"
-          />
-          <br />
-          <button class="button-primary" id="start-btn">Start</button>
-        </div>
         <p id="countdown"></p>
       </div>
       <div class="panel-right">
