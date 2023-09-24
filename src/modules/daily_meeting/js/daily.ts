@@ -99,16 +99,18 @@ async function reorder_(celda: string, data: { [key: string]: string[] }) {
         p2.style.display = "block";
         p2.style.fontWeight = "900";
         p2.style.fontSize = "x-large";
+        p2.style.marginBottom = "20px";
         c.element.append(p2);
       }
 
       if (data2[`${e}`]) {
         data2[`${e}`].forEach((d) => {
           const p3 = document.createElement("p");
-          p3.innerHTML = `${d}`;
+          p3.innerHTML = `* ${d}`;
           p3.style.display = "block";
           p3.style.fontWeight = "900";
           p3.style.fontSize = "large";
+          p3.style.marginBottom = "20px";
           if(d.includes("[Closed]") || d.includes("[Resolved]"))
           {
             columns2.completados.element?.append(p3);
