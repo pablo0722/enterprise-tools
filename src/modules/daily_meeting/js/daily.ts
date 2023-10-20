@@ -91,7 +91,7 @@ async function reorder_(celda: string, data: { [key: string]: string[] }) {
       for(const c of Object.values(columns2))
       {
         c.element = document.createElement("div");
-        c.element.className = "col-md-4";
+        c.element.className = "col-md-12";
         row2.append(c.element);
 
         const p2 = document.createElement("p");
@@ -99,7 +99,7 @@ async function reorder_(celda: string, data: { [key: string]: string[] }) {
         p2.style.display = "block";
         p2.style.fontWeight = "900";
         p2.style.fontSize = "x-large";
-        p2.style.marginBottom = "20px";
+        p2.style.marginBottom = "0px";
         c.element.append(p2);
       }
 
@@ -110,7 +110,7 @@ async function reorder_(celda: string, data: { [key: string]: string[] }) {
           p3.style.display = "block";
           p3.style.fontWeight = "900";
           p3.style.fontSize = "large";
-          p3.style.marginBottom = "20px";
+          p3.style.marginBottom = "0px";
           if(d.includes("[Closed]") || d.includes("[Resolved]"))
           {
             columns2.completados.element?.append(p3);
